@@ -2,7 +2,6 @@
 
 A stand-alone version of the [Spherical Contours](https://observablehq.com/@fil/standalone-app-notebook) observable notebook
 
-
 Download the notebook’s code:
 
 > yarn notebook
