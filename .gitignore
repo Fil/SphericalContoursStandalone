@@ -1,0 +1,6 @@
+.DS_Store
+src/notebook/
+public/main.min.js
+public/110m_land.geojson
+public/points.json
+node_modules/

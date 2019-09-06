@@ -1,0 +1,34 @@
+{
+  "name": "sphericalcontour",
+  "version": "1.0.0",
+  "description": "Standalone version of the Spherical contours notebook",
+  "main": "index.js",
+  "scripts": {
+    "notebook": "mkdir -p src/notebook && curl -o - 'https://api.observablehq.com/@fil/standalone-app-notebook.tgz?v=3' | tar xf - --directory src/notebook && npm install --save-dev src/notebook",
+    "data": "curl -o ./public/points.json https://gist.githubusercontent.com/Fil/6bc12c535edc3602813a6ef2d1c73891/raw/3ae88bf307e740ddc020303ea95d7d2ecdec0d19/points.json && curl -o ./public/110m_land.geojson https://unpkg.com/visionscarto-world-atlas@0.0.6/world/110m_land.geojson",
+    "build": "rollup -c",
+    "deploy": "now",
+    "predeploy": "npm run build",
+    "serve": "http-server public/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@fil/standalone-app-notebook": "file:src/notebook",
+    "@observablehq/runtime": "^4.4.1",
+    "build": "^0.1.4",
+    "d3": "^5.11.0",
+    "d3-geo-projection": "^2.7.0",
+    "d3-geo-voronoi": "^1.5.0",
+    "d3-require": "^1.2.3",
+    "now": "^16.1.2",
+    "rollup": "^1.20.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "serve": "^11.1.0"
+  }
+}
