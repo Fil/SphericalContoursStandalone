@@ -127,7 +127,7 @@
     to-fast-properties "^2.0.0"
 
 "@fil/standalone-app-notebook@file:src/notebook":
-  version "625.0.0"
+  version "633.0.0"
 
 "@observablehq/inspector@^3.1.0":
   version "3.1.0"
