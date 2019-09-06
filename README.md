@@ -1,6 +1,6 @@
 # SphericalContoursStandalone
 
-A stand-alone version of the [Spherical Contours](https://observablehq.com/@fil/standalone-app-notebook) observable notebook
+A stand-alone version of the [Spherical Contours](https://observablehq.com/@fil/spherical-contours) observable notebook
 
 Setup:
 
@@ -14,6 +14,9 @@ Deploy:
 
 > yarn deploy
 
+## Demo
+
+https://sphericalcontoursstandalone.fil.now.sh
 
 ## Documentation
 
