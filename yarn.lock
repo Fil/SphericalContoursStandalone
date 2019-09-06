@@ -126,9 +126,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@fil/standalone-app-notebook@file:src/notebook":
-  version "625.0.0"
-
 "@observablehq/inspector@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@observablehq/inspector/-/inspector-3.1.0.tgz#4726f9aabc58aa410a4ba27adf89b180fa9a302b"
@@ -170,6 +167,9 @@
   integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
   dependencies:
     "@types/node" "*"
+
+"_notebook@file:src/notebook":
+  version "561.0.0"
 
 acorn@^7.0.0:
   version "7.0.0"
