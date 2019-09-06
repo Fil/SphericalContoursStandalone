@@ -1,5 +1,5 @@
 // Import Observable notebook
-import notebook from '@fil/standalone-app-notebook';
+import notebook from '_notebook';
 
 // Import d3
 import * as d3 from 'd3';
