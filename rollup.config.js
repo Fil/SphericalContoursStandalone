@@ -1,26 +1,41 @@
-import * as meta from './package.json';
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import json from 'rollup-plugin-json';
-import {terser} from 'rollup-plugin-terser';
+import * as meta from './package.json'
+import resolve from 'rollup-plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
+import json from 'rollup-plugin-json'
+import { terser } from 'rollup-plugin-terser'
 
-export default {
+const banner = `// ${meta.homepage} v${
+  meta.version
+} Copyright ${new Date().getFullYear()} ${meta.author.name}`
+const onwarn = function(warning, warn) {
+  if (warning.code === 'CIRCULAR_DEPENDENCY') {
+    return
+  }
+  warn(warning)
+}
+
+const config = {
   input: 'src/main.js',
-  onwarn: function(warning, warn) {
-    if (warning.code === 'CIRCULAR_DEPENDENCY') {
-      return;
-    }
-    warn(warning);
-  },
+  onwarn: onwarn,
   output: {
-    file: `public/main.min.js`,
+    file: `public/main.js`,
     name: '${meta.name}',
     format: 'iife',
     indent: false,
     extend: true,
-    banner: `// ${meta.homepage} v${
-      meta.version
-    } Copyright ${new Date().getFullYear()} ${meta.author.name}`,
+    banner: banner,
   },
-  plugins: [resolve(), json(), babel(), terser()],
-};
+  plugins: [resolve(), json(), babel()],
+}
+
+const minConfig = {
+  input: config.input,
+  onwarn: config.onwarn,
+  output: {
+    ...config.output,
+    file: `public/main.min.js`,
+  },
+  plugins: [...config.plugins, terser()],
+}
+
+export default [config, minConfig]
