@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "notebook": "mkdir -p src/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory src/notebook && yarn install --dev src/notebook",
-    "data": "download-data",
+    "data": "node bin/download-data.js",
     "build": "rollup -c",
     "deploy": "now",
     "predeploy": "yarn build",
