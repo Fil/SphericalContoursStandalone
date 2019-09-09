@@ -2,9 +2,10 @@
 const request = require('request')
 const fs = require('fs')
 const fetchAlias = require('../src/fetchAlias.json')
-const DIR = './public/data'
+const DIR = './public'
 
 for (const url of Object.keys(fetchAlias)) {
-  console.warn(`download ${fetchAlias[url]} from ${url}`);
-  request(url).pipe(fs.createWriteStream(`${DIR}/${fetchAlias[url]}`))
+  const filename = `${DIR}/${fetchAlias[url]}`
+  console.warn(`download ${filename} from ${url}`)
+  request(url).pipe(fs.createWriteStream(filename))
 }
