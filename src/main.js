@@ -1,13 +1,14 @@
 // Import Observable notebook
 import notebook from 'aaa_notebook';
-import * as fetchAlias from './fetchAlias.json';
+import {default as fetchAlias} from './fetchAlias.json';
+const dataPrefix = './data';
 
 // intercept and reroute calls
 const _fetch = fetch;
 fetch = function() {
   const a = arguments;
   if (a[0] in fetchAlias)
-    a[0] = fetchAlias[a[0]];
+    a[0] = `${dataPrefix}/${fetchAlias[a[0]]}`;
   return _fetch(...a);
 }
 
