@@ -2,9 +2,9 @@
 
 A stand-alone version of the [Spherical Contours](https://observablehq.com/@fil/spherical-contours) observable notebook
 
-Setup:
+Install:
 
-> yarn setup
+> yarn
 
 Serve:
 
