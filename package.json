@@ -8,7 +8,7 @@
     "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "build": "rollup -c && cp src/index.html public/ && cp src/favicon.ico public/",
     "deploy": "now",
-    "notebook": "rm -f vendor/notebook.tgz && mkdir -p vendor && curl -o vendor/notebook.tgz 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' && yarn add --dev aaa_notebook@file:vendor/notebook.tgz",
+    "notebook": "rm -f vendor/notebook.tgz && mkdir -p vendor && curl -o vendor/notebook.tgz $npm_package_custom_notebook && yarn add --dev aaa_notebook@file:vendor/notebook.tgz",
     "preserve": "yarn build",
     "serve": "http-server public/",
     "setup": "yarn notebook && yarn && yarn data",
@@ -16,6 +16,9 @@
   },
   "bin": {
     "download-data": "bin/download-data.js"
+  },
+  "custom": {
+    "notebook": "https://api.observablehq.com/@fil/spherical-contours.tgz?v=3"
   },
   "author": "",
   "license": "ISC",
