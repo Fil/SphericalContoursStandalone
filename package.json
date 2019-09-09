@@ -22,7 +22,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "_notebook": "file:src/notebook",
+    "aaa_notebook": "file:src/notebook",
     "@observablehq/runtime": "^4.4.1",
     "build": "^0.1.4",
     "d3": "^5.11.0",
