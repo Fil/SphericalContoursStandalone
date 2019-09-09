@@ -4,10 +4,11 @@
   "description": "Standalone version of the Spherical contours notebook",
   "main": "index.js",
   "scripts": {
-    "data": "node bin/download-data.js",
-    "build": "rollup -c",
+    "clean": "rm -rf node_modules public vendor",
+    "data": "mkdir -p public/data && node bin/download-data.js",
+    "build": "rollup -c && cp src/index.html public/ && cp src/favicon.ico public/",
     "deploy": "now",
-    "preinstall": "mkdir -p src/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory src/notebook",
+    "preinstall": "mkdir -p vendor/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory vendor/notebook",
     "preserve": "yarn build",
     "postinstall": "yarn data",
     "serve": "http-server public/",
@@ -21,7 +22,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "aaa_notebook": "file:src/notebook",
+    "aaa_notebook": "file:vendor/notebook",
     "@observablehq/runtime": "^4.4.3",
     "d3": "5.x",
     "d3-geo-projection": "2.x",
