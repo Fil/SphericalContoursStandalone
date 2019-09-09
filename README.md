@@ -6,7 +6,7 @@ Install:
 
 > yarn
 
-Serve:
+Build and serve locally:
 
 > yarn serve
 
