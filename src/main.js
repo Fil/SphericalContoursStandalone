@@ -1,5 +1,5 @@
 // Import Observable notebook
-import notebook from '_notebook';
+import notebook from '-notebook';
 import * as fetchAlias from './fetchAlias.json';
 
 // intercept and reroute calls
