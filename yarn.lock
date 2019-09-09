@@ -437,7 +437,7 @@ d3-format@1:
   resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-1.3.2.tgz#6a96b5e31bcb98122a30863f7d92365c00603562"
   integrity sha512-Z18Dprj96ExragQ0DeGi+SYPQ7pPfRMtUXtsg/ChVIKNBCzjO8XYJvRTC1usblx52lqge56V5ect+frYTQc8WQ==
 
-d3-geo-projection@^2.7.0:
+d3-geo-projection@2.x:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/d3-geo-projection/-/d3-geo-projection-2.7.0.tgz#a881871004a892f51424ca649b09977b1dbd5ee6"
   integrity sha512-G8C/8gvUQVwuLloW88d/NGbyh5CLONowQzU6gB7cczfGbSjMrQHFbaCqipWUqUWaBdqpyfTlLE3GPGy0RMpKYw==
@@ -447,7 +447,7 @@ d3-geo-projection@^2.7.0:
     d3-geo "^1.10.0"
     resolve "^1.1.10"
 
-d3-geo-voronoi@^1.5.0:
+d3-geo-voronoi@1.5.x:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/d3-geo-voronoi/-/d3-geo-voronoi-1.5.0.tgz#b1bd712bbf8a848980a914bbdf8eb1d042d89b49"
   integrity sha512-sPcZGuw8GyiS8F0e5CBmdH4EYsOua9bi0F3agveUtvqTHE/GBoUkFO5rtsVfa7hN8qjC4TCdWbPJFN1PaY/4XA==
@@ -599,10 +599,10 @@ d3-zoom@1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-5.11.0.tgz#d5ffc84f930eeb895d88699195d2d852778ab158"
-  integrity sha512-LXgMVUAEAzQh6WfEEOa8tJX4RA64ZJ6twC3CJ+Xzid+fXWLTZkkglagXav/eOoQgzQi5rzV0xC4Sfspd6hFDHA==
+d3@5.x:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-5.12.0.tgz#0ddeac879c28c882317cd439b495290acd59ab61"
+  integrity sha512-flYVMoVuhPFHd9zVCe2BxIszUWqBcd5fvQGMNRmSiBrgdnh6Vlruh60RJQTouAK9xPbOB0plxMvBm4MoyODXNg==
   dependencies:
     d3-array "1"
     d3-axis "1"
