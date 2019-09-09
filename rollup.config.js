@@ -34,6 +34,7 @@ const minConfig = {
   output: {
     ...config.output,
     file: `public/main.min.js`,
+    sourcemap: true,
   },
   plugins: [...config.plugins, terser()],
 }
