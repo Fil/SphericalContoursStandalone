@@ -4,6 +4,7 @@ const fs = require('fs')
 const fetchAlias = require('../src/fetchAlias.json')
 const DIR = './public'
 
-Object.keys(fetchAlias).forEach(url => {
+for (const url of Object.keys(fetchAlias)) {
+  console.warn(`download ${fetchAlias[url]} from ${url}`);
   request(url).pipe(fs.createWriteStream(`${DIR}/${fetchAlias[url]}`))
-})
+}
