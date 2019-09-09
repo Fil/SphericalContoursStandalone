@@ -1,6 +1,7 @@
 import * as meta from './package.json';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import json from 'rollup-plugin-json';
 import {terser} from 'rollup-plugin-terser';
 
 export default {
@@ -21,5 +22,5 @@ export default {
       meta.version
     } Copyright ${new Date().getFullYear()} ${meta.author.name}`,
   },
-  plugins: [resolve(), babel(), terser()],
+  plugins: [resolve(), json(), babel(), terser()],
 };
