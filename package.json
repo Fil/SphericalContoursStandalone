@@ -24,7 +24,6 @@
     "@babel/core": "^7.5.5",
     "aaa_notebook": "file:src/notebook",
     "@observablehq/runtime": "^4.4.1",
-    "build": "^0.1.4",
     "d3": "^5.11.0",
     "d3-geo-projection": "^2.7.0",
     "d3-geo-voronoi": "^1.5.0",
