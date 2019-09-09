@@ -4,14 +4,13 @@
   "description": "Standalone version of the Spherical contours notebook",
   "main": "index.js",
   "scripts": {
-    "notebook": "mkdir -p src/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory src/notebook && yarn install --dev src/notebook",
     "data": "node bin/download-data.js",
     "build": "rollup -c",
     "deploy": "now",
-    "predeploy": "yarn build",
+    "preinstall": "mkdir -p src/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory src/notebook",
     "preserve": "yarn build",
+    "postinstall": "yarn data",
     "serve": "http-server public/",
-    "setup": "yarn notebook && yarn data && yarn && yarn build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
