@@ -1,7 +1,4 @@
 .DS_Store
-src/notebook/
-public/main.js
-public/main.min.js
-public/main.min.js.map
-public/data/*
+public/
 node_modules/
+vendor/

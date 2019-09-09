@@ -196,8 +196,9 @@
   dependencies:
     "@types/node" "*"
 
-"aaa_notebook@file:src/notebook":
+"aaa_notebook@file:vendor/notebook.tgz":
   version "562.0.0"
+  resolved "file:vendor/notebook.tgz#db8f871fcb18fd66cfa377fc0142f7cb4aa074e2"
 
 acorn@^7.0.0:
   version "7.0.0"
