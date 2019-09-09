@@ -2,5 +2,6 @@
 src/notebook/
 public/main.js
 public/main.min.js
+public/main.min.js.map
 public/data/*
 node_modules/
