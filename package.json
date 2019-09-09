@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf node_modules public vendor",
-    "data": "mkdir -p public/data && node bin/download-data.js",
+    "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "build": "rollup -c && cp src/index.html public/ && cp src/favicon.ico public/",
     "deploy": "now",
-    "preinstall": "mkdir -p vendor/notebook && curl -o - 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' | tar xzf - --directory vendor/notebook",
+    "notebook": "rm -f vendor/notebook.tgz && mkdir -p vendor && curl -o vendor/notebook.tgz 'https://api.observablehq.com/@fil/spherical-contours.tgz?v=3' && yarn add --dev aaa_notebook@file:vendor/notebook.tgz",
     "preserve": "yarn build",
-    "postinstall": "yarn data",
     "serve": "http-server public/",
+    "setup": "yarn notebook && yarn && yarn data",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
@@ -19,11 +19,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "aaa_notebook": "file:vendor/notebook",
     "@observablehq/runtime": "^4.4.3",
+    "aaa_notebook": "file:vendor/notebook.tgz",
     "d3": "5.x",
     "d3-geo-projection": "2.x",
     "d3-geo-voronoi": "1.5.x",

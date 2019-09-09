@@ -4,7 +4,7 @@ A stand-alone version of the [Spherical Contours](https://observablehq.com/@fil/
 
 Install:
 
-> yarn
+> yarn setup
 
 Build and serve locally:
 
@@ -13,6 +13,12 @@ Build and serve locally:
 Deploy:
 
 > yarn deploy
+
+Update notebook or data:
+
+> yarn notebook
+
+> yarn data
 
 ## Demo
 
