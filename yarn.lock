@@ -196,7 +196,7 @@
   dependencies:
     "@types/node" "*"
 
-"aaa_notebook@file:src/notebook":
+"aaa_notebook@file:vendor/notebook":
   version "562.0.0"
 
 acorn@^7.0.0:
