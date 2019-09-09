@@ -2,9 +2,6 @@
 # yarn lockfile v1
 
 
-"-notebook@file:src/notebook":
-  version "633.0.0"
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -170,6 +167,9 @@
   integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
   dependencies:
     "@types/node" "*"
+
+"aaa_notebook@file:src/notebook":
+  version "633.0.0"
 
 acorn@^7.0.0:
   version "7.0.0"
