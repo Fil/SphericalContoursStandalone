@@ -27,3 +27,7 @@ https://sphericalcontoursstandalone.fil.now.sh
 ## Documentation
 
 [observable-to-standalone](https://github.com/severo/observable-to-standalone/tree/master/bundle)
+
+
+Project developed for the [LIRIS M2i project](https://projet.liris.cnrs.fr/mi2/) by Sylvain
+Lesage with the help of Philippe Rivière, Romain Vuillemot and Mike Bostock.
