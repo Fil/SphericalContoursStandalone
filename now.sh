@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yarn notebook && yarn --ignore-optional && yarn data && yarn build
+yarn notebook && yarn && yarn data && yarn build
