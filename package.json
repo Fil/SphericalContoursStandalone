@@ -4,13 +4,12 @@
   "description": "Standalone version of the Spherical contours notebook",
   "main": "index.js",
   "scripts": {
-    "build": "yarn setup && yarn build:light",
-    "build:light": "rollup -c && cp src/index.html public/",
+    "build": "rollup -c && cp src/index.html public/",
     "clean": "rm -rf node_modules public vendor",
     "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "deploy": "now",
     "notebook": "rm -f vendor/notebook.tgz && mkdir -p vendor && curl -o vendor/notebook.tgz $npm_package_custom_notebook && yarn add --optional aaa_notebook@file:vendor/notebook.tgz",
-    "preserve": "yarn build:light",
+    "preserve": "yarn build",
     "serve": "http-server public/",
     "setup": "yarn notebook && yarn && yarn data",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +19,9 @@
   },
   "custom": {
     "notebook": "https://api.observablehq.com/@fil/spherical-contours.tgz?v=3"
+  },
+  "engines": {
+    "node": ">=10.x"
   },
   "author": "",
   "license": "ISC",
