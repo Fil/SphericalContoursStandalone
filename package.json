@@ -4,7 +4,7 @@
   "description": "Standalone version of the Spherical contours notebook",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c && cp src/index.html public/",
+    "build": "rollup -c && cp src/index.html public/ && cp src/favicon.ico public/",
     "clean": "rm -rf node_modules public vendor",
     "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "deploy": "now",
