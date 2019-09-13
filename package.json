@@ -9,6 +9,7 @@
     "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "deploy": "now",
     "notebook": "rm -f vendor/*notebook.tgz && timestamp=$(date \"+%s\") && mkdir -p vendor && curl -o vendor/${timestamp}_notebook.tgz $npm_package_custom_notebook && yarn add --optional aaa_notebook@file:vendor/${timestamp}_notebook.tgz",
+    "notebook:comment": "echo \"In 'notebook' script above, timestamp is a hack to avoid using local cache - see https://github.com/yarnpkg/yarn/issues/2165. No need for that with npm.\"",
     "preserve": "yarn build",
     "serve": "http-server public/",
     "setup": "yarn notebook && yarn && yarn data",
