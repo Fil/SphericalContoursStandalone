@@ -8,7 +8,7 @@
     "clean": "rm -rf node_modules public vendor",
     "data": "rm -rf public/data && mkdir -p public/data && node bin/download-data.js",
     "deploy": "now",
-    "notebook": "rm -f vendor/notebook.tgz && mkdir -p vendor && curl -o vendor/notebook.tgz $npm_package_custom_notebook && yarn add --optional aaa_notebook@file:vendor/notebook.tgz",
+    "notebook": "rm -f vendor/*.tgz && timestamp=$(date \"+%s\") && mkdir -p vendor && curl -o vendor/${timestamp}_notebook.tgz $npm_package_custom_notebook && yarn add --optional aaa_notebook@file:vendor/${timestamp}_notebook.tgz",
     "preserve": "yarn build",
     "serve": "http-server public/",
     "setup": "yarn notebook && yarn && yarn data",
@@ -42,6 +42,6 @@
     "rollup-plugin-terser": "^5.1.1"
   },
   "optionalDependencies": {
-    "aaa_notebook": "file:vendor/notebook.tgz"
+    "aaa_notebook": "file:vendor/1568386035_notebook.tgz"
   }
 }
