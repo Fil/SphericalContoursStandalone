@@ -43,6 +43,6 @@
     "rollup-plugin-terser": "^5.1.1"
   },
   "optionalDependencies": {
-    "aaa_notebook": "file:vendor/1568386035_notebook.tgz"
+    "aaa_notebook": "file:vendor/1578392206_notebook.tgz"
   }
 }
