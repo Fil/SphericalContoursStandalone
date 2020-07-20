@@ -33,7 +33,7 @@
     "d3-geo-projection": "2.x",
     "d3-geo-voronoi": "1.5.x",
     "d3-require": "^1.2.3",
-    "http-server": "^0.12.1",
+    "http-server": "^0.12",
     "now": "^16.2.0",
     "request": "^2.88.0",
     "rollup": "^1.21.2",
