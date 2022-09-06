@@ -22,7 +22,7 @@ Update notebook or data:
 
 ## Demo
 
-https://sphericalcontoursstandalone.fil.now.sh
+https://sphericalcontoursstandalone-fil.vercel.app/
 
 ## Documentation
 
