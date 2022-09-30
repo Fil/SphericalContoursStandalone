@@ -29,9 +29,9 @@
   "devDependencies": {
     "@babel/core": "^7.17.0",
     "@observablehq/runtime": "^4.4.3",
-    "d3": "5.x",
-    "d3-geo-projection": "2.x",
-    "d3-geo-voronoi": "1.5.x",
+    "d3": "7",
+    "d3-geo-projection": "4",
+    "d3-geo-voronoi": "2",
     "d3-require": "^1.2.3",
     "http-server": "14",
     "request": "^2.88.0",
@@ -40,9 +40,9 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.3.1",
-    "vercel": "28"
+    "vercel": "28.4.5"
   },
   "optionalDependencies": {
-    "aaa_notebook": "file:vendor/1662453922_notebook.tgz"
+    "aaa_notebook": "file:vendor/1664542562_notebook.tgz"
   }
 }
